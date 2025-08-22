@@ -1,6 +1,6 @@
 package org.generation.util.banco;
 
-public abstract class CuentaDebito {
+public class CuentaDebito extends Cuenta{
     private double montoMinimo;
     private double saldo;
     
@@ -45,5 +45,10 @@ public abstract class CuentaDebito {
         System.out.println("Depósito exitoso: " + cantidad);
         return saldo;
     }//deposito
+	
+	public String toString() {
+		return "Cuenta Débito [" + super.toString() + 
+				", Monto mínimo=" + montoMinimo + "]";
+	}//toString
 	
 }//class
